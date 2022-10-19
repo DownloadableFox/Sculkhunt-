@@ -12,14 +12,14 @@
 				"maintainer": "DownloadableFox"
 			},
 			"contact": {
-				"sources": "https://github.com/${github_repository}",
-				"issues": "https://github.com/${github_repository}/issues"
+				"sources": "https://github.com/DownloadableFox/Sculkhunt-",
+				"issues": "https://github.com/DownloadableFox/Sculkhunt-/issues"
 			},
 			"icon": "assets/sculkhunt/icon.png"
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
-			"init": "io.github.downloadablefox.Sculkhunt"
+			"init": "io.github.downloadablefox.sculkhunt.Sculkhunt"
 		},
 		"depends": [
 			{
