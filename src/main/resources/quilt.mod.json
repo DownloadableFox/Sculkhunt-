@@ -36,5 +36,8 @@
 			}
 		]
 	},
-	"mixin": "sculkhunt.mixins.json"
+	"mixin": "sculkhunt.mixins.json",
+	"cardinal-components": [
+		"sculkhunt:sculk"
+	]
 }
