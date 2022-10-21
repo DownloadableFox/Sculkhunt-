@@ -1,11 +1,9 @@
-package io.github.downloadablefox.commands;
+package io.github.downloadablefox.sculkhunt.commands;
 
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.context.CommandContext;
 
 import io.github.downloadablefox.sculkhunt.GameState;
-import io.github.downloadablefox.sculkhunt.GameState.State;
-import net.minecraft.command.CommandSource;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.text.Text;

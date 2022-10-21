@@ -6,10 +6,12 @@ import org.quiltmc.qsl.command.api.CommandRegistrationCallback;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import io.github.downloadablefox.commands.SculkhuntDebugCommand;
+import io.github.downloadablefox.sculkhunt.commands.SculkhuntCommand;
+import io.github.downloadablefox.sculkhunt.commands.SculkhuntDebugCommand;
 
 public class Sculkhunt implements ModInitializer {
-	public static final Boolean DEBUG = true; // should be false in production
+	public static final boolean DEBUG = true; // should be false in production
+
 	public static final String MOD_ID = "sculkhunt";
 	public static final String MOD_NAME = "Sculkhunt+";
 	public static final String MOD_VERSION = "0.0.1";
@@ -18,6 +20,7 @@ public class Sculkhunt implements ModInitializer {
 
 	private void registerCommands() {
 		CommandRegistrationCallback.EVENT.register((dispatcher, context, environment) -> {
+			SculkhuntCommand.register(dispatcher);
 			if (DEBUG) SculkhuntDebugCommand.register(dispatcher);
 		});
 	}
