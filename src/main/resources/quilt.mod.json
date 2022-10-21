@@ -19,6 +19,7 @@
 		},
 		"intermediate_mappings": "net.fabricmc:intermediary",
 		"entrypoints": {
+			"cardinal-components": "io.github.downloadablefox.sculkhunt.components.SculkComponentRegistry",
 			"init": "io.github.downloadablefox.sculkhunt.Sculkhunt"
 		},
 		"depends": [

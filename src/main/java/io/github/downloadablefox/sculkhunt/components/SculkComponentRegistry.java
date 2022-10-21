@@ -1,4 +1,4 @@
-package io.github.downloadablefox.sculkhunt.cca;
+package io.github.downloadablefox.sculkhunt.components;
 
 import dev.onyxstudios.cca.api.v3.component.ComponentKey;
 import dev.onyxstudios.cca.api.v3.component.ComponentRegistryV3;

@@ -3,6 +3,9 @@ package io.github.downloadablefox.sculkhunt;
 import java.util.ArrayList;
 import java.util.UUID;
 
+import org.quiltmc.qsl.networking.api.PlayerLookup;
+
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.network.ServerPlayerEntity;
 
 public class GameState {
@@ -42,7 +45,9 @@ public class GameState {
         }
     }
 
-    public void startGame() {}
+    public void startGame() {
+
+    }
 
     public void stopGame() {}
 
@@ -66,7 +71,7 @@ public class GameState {
         return true;
     }
 
-    public boolean sculklistPlayer(ServerPlayerEntity player) {
+    public boolean setSculk(ServerPlayerEntity player) {
         if (sculks.contains(player.getUuid())) {
             return false;
         }
@@ -75,7 +80,7 @@ public class GameState {
         return true;
     }
 
-    public boolean unsculklistPlayer(ServerPlayerEntity player) {
+    public boolean removeSculk(ServerPlayerEntity player) {
         if (!sculks.contains(player.getUuid())) {
             return false;
         }

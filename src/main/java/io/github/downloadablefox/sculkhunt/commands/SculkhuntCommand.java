@@ -31,6 +31,7 @@ public class SculkhuntCommand {
 
     public static int startGame(CommandContext<ServerCommandSource> context) {
         ServerCommandSource source = context.getSource();
+        
         source.sendFeedback(Text.literal("Starting game...").setStyle(SUCCESS_STYLE), false);
         GameState.INSTANCE.startGame();
         return 1;
@@ -98,7 +99,7 @@ public class SculkhuntCommand {
 
         if (players.size() > 1) {
             for (ServerPlayerEntity player : players) {
-                if (!GameState.INSTANCE.sculklistPlayer(player)) {
+                if (!GameState.INSTANCE.setSculk(player)) {
                     source.sendFeedback(Text.literal("Couldn't add " + player.getEntityName()  + " to the sculk list as they're already in it!").setStyle(ERROR_STYLE), false);
                 }
             }
@@ -108,7 +109,7 @@ public class SculkhuntCommand {
         }
 
         ServerPlayerEntity player = players.iterator().next();
-        if (!GameState.INSTANCE.sculklistPlayer(player)) {
+        if (!GameState.INSTANCE.setSculk(player)) {
             source.sendFeedback(Text.literal("Couldn't add " + player.getEntityName()  + " to the sculk list as they're already in it!").setStyle(ERROR_STYLE), false);
         } else {
             source.sendFeedback(Text.literal("Added " + player.getEntityName() + " players to the sculk list.").setStyle(SUCCESS_STYLE), false);
@@ -120,7 +121,7 @@ public class SculkhuntCommand {
 
         if (players.size() > 1) {
             for (ServerPlayerEntity player : players) {
-                if (!GameState.INSTANCE.unsculklistPlayer(player)) {
+                if (!GameState.INSTANCE.removeSculk(player)) {
                     source.sendFeedback(Text.literal("Couldn't remove " + player.getEntityName()  + " from the sculk list they're not in it!").setStyle(ERROR_STYLE), false);
                 }
             }
@@ -130,7 +131,7 @@ public class SculkhuntCommand {
         }
 
         ServerPlayerEntity player = players.iterator().next();
-        if (!GameState.INSTANCE.unsculklistPlayer(player)) {
+        if (!GameState.INSTANCE.removeSculk(player)) {
             source.sendFeedback(Text.literal("Couldn't remove " + player.getEntityName()  + " as they're not in it!").setStyle(ERROR_STYLE), false);
         } else {
             source.sendFeedback(Text.literal("Removed " + player.getEntityName() + " from turning from the sculk list.").setStyle(SUCCESS_STYLE), false);

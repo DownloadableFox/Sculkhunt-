@@ -1,4 +1,4 @@
-package io.github.downloadablefox.sculkhunt.cca;
+package io.github.downloadablefox.sculkhunt.components;
 
 import dev.onyxstudios.cca.api.v3.component.sync.AutoSyncedComponent;
 import dev.onyxstudios.cca.api.v3.component.tick.ClientTickingComponent;
@@ -44,7 +44,7 @@ public class SculkComponent implements SculkProperties, AutoSyncedComponent, Ser
     }   
 
     @Override
-    public boolean isSculk() {
+    public boolean getSculk() {
         return this.isSculk;
     }
 
