@@ -16,5 +16,4 @@ public class SculkComponentRegistry implements EntityComponentInitializer {
     public void registerEntityComponentFactories(EntityComponentFactoryRegistry registry) {
         registry.registerFor(LivingEntity.class, SCULK, SculkComponent::new);
     }
-    
 }

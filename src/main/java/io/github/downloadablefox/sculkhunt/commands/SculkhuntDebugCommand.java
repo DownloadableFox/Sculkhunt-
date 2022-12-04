@@ -1,7 +1,5 @@
 package io.github.downloadablefox.sculkhunt.commands;
 
-import java.util.Collection;
-
 import com.mojang.brigadier.CommandDispatcher;
 import com.mojang.brigadier.context.CommandContext;
 
@@ -36,7 +34,7 @@ public class SculkhuntDebugCommand {
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher) {
         dispatcher.register(CommandManager.literal(COMMAND_NAME)
             .then(CommandManager.literal("gamestate").executes(SculkhuntDebugCommand::getGameState)) // sculkhunt-debug getGameState
-            .then(CommandManager.literal("sculk").then(CommandManager.argument("player", EntityArgumentType.player())
+            .then(CommandManager.literal("togglesculk").then(CommandManager.argument("player", EntityArgumentType.player())
             .executes((context) -> setSculk(context, EntityArgumentType.getPlayer(context, "player"))))) // sculkhunt-debug setSculk <player>
         );
     }

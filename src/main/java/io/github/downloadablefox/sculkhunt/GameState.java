@@ -3,9 +3,6 @@ package io.github.downloadablefox.sculkhunt;
 import java.util.ArrayList;
 import java.util.UUID;
 
-import org.quiltmc.qsl.networking.api.PlayerLookup;
-
-import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.network.ServerPlayerEntity;
 
 public class GameState {

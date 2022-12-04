@@ -12,7 +12,9 @@ The following things to do are not in order...
 - Apply all the game is GameState logic and event listeners
 - Create the sculk biome
 - Apply shaders (fix some of the known issues with shaders)
-- Use Cardinal Components to save the player's state on leave
+- Use Cardinal Components to + the player's state on leave
 
 # Things to improve
 - Sculks being able to pick sculkblocks when they are in ground
+- Sculk messaging system
+- /kill command for sculk (delay 100s)
